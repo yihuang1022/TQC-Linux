@@ -452,6 +452,172 @@
     margin-bottom: 4px;
     font-size: 0.9rem;
   }
+
+  /* ===== Responsive Layout ===== */
+
+  /* Tablet (≤768px) */
+  @media (max-width: 768px) {
+    body { font-size: 16px; }
+
+    header {
+      padding: 14px 18px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    header h1 { font-size: 1.3rem; }
+    #score-display { font-size: 0.9rem; }
+
+    .container { padding: 20px 14px; }
+
+    #settings-panel { padding: 24px 18px; }
+
+    .category-grid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 8px;
+    }
+
+    .settings-row {
+      padding: 14px 16px;
+      gap: 12px;
+    }
+
+    .question-card { padding: 24px 18px; }
+    .question-text { font-size: 1.1rem; }
+
+    .option-btn {
+      padding: 14px 16px;
+      font-size: 1rem;
+    }
+
+    #result-panel { padding: 36px 24px; }
+    #result-panel h2 { font-size: 1.6rem; }
+    .score-big { font-size: 4rem; }
+
+    .tab-btn { padding: 10px 18px; font-size: 0.95rem; }
+
+    .browser-toolbar { flex-direction: column; align-items: stretch; }
+    .browser-search { min-width: unset; }
+  }
+
+  /* Mobile (≤480px) */
+  @media (max-width: 480px) {
+    body { font-size: 15px; }
+
+    header {
+      padding: 12px 14px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+    header h1 { font-size: 1.15rem; }
+    #score-display { font-size: 0.85rem; }
+
+    .container { padding: 14px 10px; }
+
+    #settings-panel { padding: 18px 12px; margin-bottom: 16px; }
+    #settings-panel h2 { font-size: 1.05rem; }
+
+    .cat-controls { gap: 8px; flex-wrap: wrap; }
+    .btn-small { padding: 6px 12px; font-size: 0.85rem; }
+
+    .category-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .cat-item { padding: 10px 12px; gap: 8px; }
+    .cat-item label { font-size: 0.88rem; }
+    .cat-count { display: none; }
+
+    .settings-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 14px 14px;
+      margin-bottom: 16px;
+    }
+    input[type=number] { width: 80px; font-size: 1rem; }
+
+    .btn-primary {
+      width: 100%;
+      padding: 14px 20px;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .btn-secondary {
+      width: 100%;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.95rem;
+    }
+
+    .progress-bar-wrap { margin-bottom: 16px; }
+
+    .q-header {
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .category-tag { font-size: 0.8rem; padding: 4px 10px; }
+
+    .question-card { padding: 18px 14px; margin-bottom: 14px; }
+    .question-text { font-size: 1rem; line-height: 1.7; margin-bottom: 20px; }
+
+    .option-btn {
+      padding: 12px 14px;
+      font-size: 0.95rem;
+      gap: 12px;
+    }
+    .option-btn .letter {
+      min-width: 24px;
+      font-size: 1rem;
+      padding: 2px 5px;
+    }
+
+    .explanation-box { padding: 14px 14px; font-size: 0.92rem; }
+
+    .quiz-footer {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .quiz-footer > * { width: 100%; text-align: center; }
+    .result-badge { font-size: 1.05rem; padding: 10px 14px; }
+
+    #result-panel { padding: 28px 16px; }
+    #result-panel h2 { font-size: 1.4rem; }
+    .score-big { font-size: 3.2rem; }
+    .score-unit { font-size: 1.2rem; }
+    .score-detail { font-size: 1rem; }
+
+    .history-tabs { overflow-x: auto; white-space: nowrap; }
+    .tab-btn { padding: 9px 14px; font-size: 0.9rem; }
+
+    .wrong-item-header { padding: 12px 14px; gap: 10px; }
+    .wrong-count { font-size: 0.95rem; padding: 3px 9px; min-width: 38px; }
+    .wrong-q { font-size: 0.88rem; }
+    .wrong-item-body { padding: 0 14px 14px; }
+
+    .q-card-header { padding: 12px 14px; gap: 8px; }
+    .q-preview { font-size: 0.92rem; }
+    .q-tag { font-size: 0.75rem; padding: 3px 8px; }
+    .q-card-body { padding: 0 14px 16px; }
+
+    .browser-toolbar { gap: 8px; }
+    .browser-search,
+    .browser-select { padding: 10px 12px; font-size: 0.95rem; }
+
+    .browser-pagination { gap: 8px; flex-wrap: wrap; }
+    .page-btn { padding: 7px 14px; font-size: 0.9rem; }
+
+    .result-wrong-item { padding: 16px 14px; }
+    .result-wrong-q { font-size: 0.95rem; }
+  }
+
+  /* Extra small (≤360px) */
+  @media (max-width: 360px) {
+    .category-grid { grid-template-columns: 1fr; }
+    .score-big { font-size: 2.8rem; }
+    header h1 { font-size: 1rem; }
+  }
 </style>
 </head>
 <body>
